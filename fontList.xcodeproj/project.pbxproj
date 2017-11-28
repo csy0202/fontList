@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8D556C1F1FCCFD24003FFD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C1E1FCCFD24003FFD0C /* AppDelegate.m */; };
-		8D556C221FCCFD24003FFD0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C211FCCFD24003FFD0C /* ViewController.m */; };
 		8D556C251FCCFD24003FFD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D556C231FCCFD24003FFD0C /* Main.storyboard */; };
 		8D556C271FCCFD24003FFD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D556C261FCCFD24003FFD0C /* Assets.xcassets */; };
 		8D556C2A1FCCFD24003FFD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D556C281FCCFD24003FFD0C /* LaunchScreen.storyboard */; };
 		8D556C2D1FCCFD24003FFD0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C2C1FCCFD24003FFD0C /* main.m */; };
 		8D556C371FCCFD24003FFD0C /* fontListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C361FCCFD24003FFD0C /* fontListTests.m */; };
 		8D556C421FCCFD24003FFD0C /* fontListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C411FCCFD24003FFD0C /* fontListUITests.m */; };
+		8D556C531FCCFD95003FFD0C /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C501FCCFD94003FFD0C /* FontViewController.m */; };
+		8D556C541FCCFD95003FFD0C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C511FCCFD94003FFD0C /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,6 @@
 		8D556C1A1FCCFD24003FFD0C /* fontList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fontList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D556C1D1FCCFD24003FFD0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D556C1E1FCCFD24003FFD0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D556C201FCCFD24003FFD0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8D556C211FCCFD24003FFD0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D556C241FCCFD24003FFD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D556C261FCCFD24003FFD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D556C291FCCFD24003FFD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		8D556C3D1FCCFD24003FFD0C /* fontListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fontListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D556C411FCCFD24003FFD0C /* fontListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fontListUITests.m; sourceTree = "<group>"; };
 		8D556C431FCCFD24003FFD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D556C4F1FCCFD94003FFD0C /* FontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
+		8D556C501FCCFD94003FFD0C /* FontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontViewController.m; sourceTree = "<group>"; };
+		8D556C511FCCFD94003FFD0C /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		8D556C521FCCFD94003FFD0C /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +106,10 @@
 			children = (
 				8D556C1D1FCCFD24003FFD0C /* AppDelegate.h */,
 				8D556C1E1FCCFD24003FFD0C /* AppDelegate.m */,
-				8D556C201FCCFD24003FFD0C /* ViewController.h */,
-				8D556C211FCCFD24003FFD0C /* ViewController.m */,
+				8D556C4F1FCCFD94003FFD0C /* FontViewController.h */,
+				8D556C501FCCFD94003FFD0C /* FontViewController.m */,
+				8D556C521FCCFD94003FFD0C /* TableViewController.h */,
+				8D556C511FCCFD94003FFD0C /* TableViewController.m */,
 				8D556C231FCCFD24003FFD0C /* Main.storyboard */,
 				8D556C261FCCFD24003FFD0C /* Assets.xcassets */,
 				8D556C281FCCFD24003FFD0C /* LaunchScreen.storyboard */,
@@ -265,8 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D556C221FCCFD24003FFD0C /* ViewController.m in Sources */,
+				8D556C531FCCFD95003FFD0C /* FontViewController.m in Sources */,
 				8D556C2D1FCCFD24003FFD0C /* main.m in Sources */,
+				8D556C541FCCFD95003FFD0C /* TableViewController.m in Sources */,
 				8D556C1F1FCCFD24003FFD0C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
