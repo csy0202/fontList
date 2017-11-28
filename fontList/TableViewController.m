@@ -9,34 +9,24 @@
 #import "TableViewController.h"
 #import "FontViewController.h"
 @interface TableViewController ()
-@property (nonatomic,strong)NSMutableArray * array;
+@property (nonatomic,strong)NSArray * familyNames;
 @end
 
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.array =[NSMutableArray array];
-    self.array = [UIFont familyNames].mutableCopy;
-    
-    [self.array sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        NSString *a = (NSString *)obj1;
-        NSString *b = (NSString *)obj2;
-        
-        if (a > b) {
-            return NSOrderedDescending;
+    for (NSString * familyName in [UIFont familyNames]) {
+        NSArray * fontNames =[UIFont fontNamesForFamilyName:familyName];
+        NSLog(@"familyName: %@",familyName);
+        for (NSString * fontName in fontNames) {
+            NSLog(@"   fontName: %@",fontName);
         }
-        else if (a < b){
-            return NSOrderedAscending;
-        }
-        else {
-            return NSOrderedSame;
-        }
-    }];
-    
-    NSLog(@"p %@", self.array);
+    }
+    self.familyNames = [[UIFont familyNames] sortedArrayUsingSelector:@selector(compare:)];
+  
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,44 +36,37 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [UIFont familyNames].count;
+    return self.familyNames.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSString * name =[UIFont familyNames][section];
-    NSArray * mames =[UIFont fontNamesForFamilyName:name];
-    return mames.count;
+    NSString * familyName =self.familyNames[section];
+    NSArray * fontNames =[UIFont fontNamesForFamilyName:familyName];
+    return fontNames.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSString * name =[UIFont familyNames][indexPath.section];
-    NSArray * mames =[UIFont fontNamesForFamilyName:name];
-    NSString * string =mames[indexPath.row];
-    cell.textLabel.text =@"紫竹吟风 love 123 @#%&";
-    cell.textLabel.font =[UIFont fontWithName:string size:17];
-    cell.detailTextLabel.text = string;
-    
+    NSString * familyName =self.familyNames[indexPath.section];
+    NSArray * fontNames =[UIFont fontNamesForFamilyName:familyName];
+    NSString * fontName =fontNames[indexPath.row];
+    cell.textLabel.text =@"紫竹吟风 ❤️ zyl 1314 @#%&";
+    cell.textLabel.font =[UIFont fontWithName:fontName size:17];
+    cell.detailTextLabel.text = fontName;
     return cell;
 }
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return [UIFont familyNames][section];
+    return self.familyNames[section];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString * name =[UIFont familyNames][indexPath.section];
-    NSArray * mames =[UIFont fontNamesForFamilyName:name];
-    NSString * string =mames[indexPath.row];
-   [self performSegueWithIdentifier:@"next"sender:string];
-
+    NSString * familyName =self.familyNames[indexPath.section];
+    NSArray * fontNames =[UIFont fontNamesForFamilyName:familyName];
+    NSString * fontName =fontNames[indexPath.row];
+   [self performSegueWithIdentifier:@"next"sender:fontName];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     FontViewController* vc=segue.destinationViewController;
-//    UITableViewCell * cell = sender;
-//    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
-//    NSString * name =[UIFont familyNames][indexPath.section];
-//    NSArray * mames =[UIFont fontNamesForFamilyName:name];
     vc.fontName= sender;
     
 }

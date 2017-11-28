@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0284131FCD55AF00351FD2 /* 迷你简细行楷.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D0284121FCD558A00351FD2 /* 迷你简细行楷.ttf */; };
 		8D556C1F1FCCFD24003FFD0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D556C1E1FCCFD24003FFD0C /* AppDelegate.m */; };
 		8D556C251FCCFD24003FFD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D556C231FCCFD24003FFD0C /* Main.storyboard */; };
 		8D556C271FCCFD24003FFD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D556C261FCCFD24003FFD0C /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0284121FCD558A00351FD2 /* 迷你简细行楷.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "迷你简细行楷.ttf"; sourceTree = "<group>"; };
 		8D556C1A1FCCFD24003FFD0C /* fontList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fontList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D556C1D1FCCFD24003FFD0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D556C1E1FCCFD24003FFD0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				8D556C501FCCFD94003FFD0C /* FontViewController.m */,
 				8D556C521FCCFD94003FFD0C /* TableViewController.h */,
 				8D556C511FCCFD94003FFD0C /* TableViewController.m */,
+				8D0284121FCD558A00351FD2 /* 迷你简细行楷.ttf */,
 				8D556C231FCCFD24003FFD0C /* Main.storyboard */,
 				8D556C261FCCFD24003FFD0C /* Assets.xcassets */,
 				8D556C281FCCFD24003FFD0C /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0284131FCD55AF00351FD2 /* 迷你简细行楷.ttf in Resources */,
 				8D556C2A1FCCFD24003FFD0C /* LaunchScreen.storyboard in Resources */,
 				8D556C271FCCFD24003FFD0C /* Assets.xcassets in Resources */,
 				8D556C251FCCFD24003FFD0C /* Main.storyboard in Resources */,
@@ -439,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9UC88Q678;
 				INFOPLIST_FILE = fontList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---.fontList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,6 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9UC88Q678;
 				INFOPLIST_FILE = fontList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---.fontList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
